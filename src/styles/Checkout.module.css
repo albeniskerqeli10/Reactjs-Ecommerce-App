@@ -19,11 +19,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap:wrap;
- min-height:300px; 
+flex-direction: column;
+  min-height:300px; 
 }
 
 .CheckoutBox {
-  width:350px;
+  width:100%;
   min-height: 150px;
   border:1px solid lavender;
 }
