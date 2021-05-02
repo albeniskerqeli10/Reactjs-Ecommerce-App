@@ -6,6 +6,7 @@
     "@babel/runtime": "^7.14.0",
     "@types/react": "17.0.4",
     "babel-runtime": "^6.26.0",
+    "firebase-tools": "^9.10.0",
     "intellisense": "0.0.1",
     "path": "0.12.7",
     "react": "17.0.2",
