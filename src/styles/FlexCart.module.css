@@ -1,0 +1,55 @@
+.FlexCart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px 0;
+  border: 2px solid lavender;
+}
+
+.FlexCart h1 {
+  margin:10px 0;
+}
+
+.FlexCart img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height:100%;
+}
+
+.FlexCart .CartInfo {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.CartInfoQt {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.FlexCart button {
+  padding: 10px 20px;
+  background: var(--lightblack);
+  border: none;
+  margin:0 10px;
+  color: var(--white);
+}
+
+.FlexCart .icon {
+  padding:10px;
+  background-color:var(--lightblue);
+  font-weight: bold;
+  color:var(--darkblack);
+}

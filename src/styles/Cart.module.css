@@ -1,0 +1,52 @@
+.Cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.CartRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  min-height: 100px;
+}
+
+.CartRow h1 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.CartRow > div {
+  flex-basis: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Cart .deleteIcon {
+  padding:10px;
+  font-size:15px;
+  color: var(--white);
+  background: var(--lightblack)
+}
+
+.CleanCartBtn {
+  padding:10px 20px;
+  border: none;
+  background-color:var(--darkblack);
+  color:var(--white);
+}
+
+.CheckoutCartBtn {
+  padding:10px 20px;
+  border: none;
+  background-color:var(--lightorange);
+  color:var(--white);
+}

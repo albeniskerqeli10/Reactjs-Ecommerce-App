@@ -1,0 +1,48 @@
+.FlexProduct {
+  width: 250px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.FlexProduct img {
+  width: 200px;
+  height: 150px;
+  background:lavender;
+  object-fit: cover;
+  padding:20px 0;
+  max-width: 100%;
+}
+
+.FlexProduct .addToCartButton {
+  padding: 10px 20px;
+  background-color: var(--lightgreen);
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 20px;
+  flex-direction: row;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.addToCartButton h4 {
+  font-size: 15px!important;
+  margin:0 5px!important;
+}
+
+.FlexProduct h1 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+.FlexProduct h4 {
+  margin: 20px 0;
+  font-size: 18px;
+}

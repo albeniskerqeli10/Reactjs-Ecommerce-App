@@ -1,0 +1,10 @@
+
+
+
+  .Toastify__toast--success {
+    background: var(--lightblack)!important;
+  }
+  
+  .toastProgress {
+    background: var(--lightorange)!important;
+  }
