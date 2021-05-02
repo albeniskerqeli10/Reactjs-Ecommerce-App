@@ -29,7 +29,7 @@ const history  = useHistory();
         },
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
-          history.push('/');
+          history.push('/final');
           setCarts([]);
         },
         onError: (err) => {
