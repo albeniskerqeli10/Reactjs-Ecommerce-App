@@ -28,10 +28,10 @@ const Checkout = () => {
   
   return (
     <div className={styling.Checkout}>
-    <div>
+    <div className={styling.CheckoutList}>
     <h1>List of Products</h1>
       {checkout.map(check=> (
-        <div>
+        <div className={styling.CheckoutBox}>
         <h1>{check.title}</h1>
         <h4>{check.price}</h4>
         </div>

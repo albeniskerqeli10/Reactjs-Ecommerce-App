@@ -13,7 +13,7 @@ export const ProductsData = [
     id: 1,
     title: "Headphones",
     image:
-      "https://lh3.googleusercontent.com/proxy/paAjt2SnMJDsd_tDDIk-j66Q5Q393XxdwUoGimRnU9xuKP-hcBdUe7nq0V476h-zwozGJ22ZoHg6kxDpmYVl26NQY6N1IgyGQzmkJwDiC2npvKrlqka3ZKsBfycT9U9JD3km",
+      "https://lh3.googleusercontent.com/proxy/JHSi8fTkw4GHhQvQoGCc5J8hmS8fy6zS8TbHBI9K5iwhI0c5X7ESVfOKAFjP35GPs9JnrH5oLkchOySfmSKzUBqRS-WShnsxb7_0G2pQGgNDYNqMJjt8HnQ_j8jYv0i6YGs",
     price: 25,
     count: 1,
 
