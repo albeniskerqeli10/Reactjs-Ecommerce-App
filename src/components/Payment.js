@@ -1,10 +1,15 @@
 import React, { useRef, useEffect  , useContext} from "react";
 import {StoreContext} from "../Context/StoreContext";
+import {useHistory} from 'react-router-dom';
 
 export default function Paypal() {
   const paypal = useRef();
-  const {total} = useContext(StoreContext); 
+const history  = useHistory();
+
+  const {total , cartctx ,  checkoutsort} = useContext(StoreContext); 
   const {TotalCartPrice} =  total;
+  let {filteredcheck} = checkoutsort;
+  let [carts,setCarts] = cartctx;
   useEffect(() => {
     window.paypal
       .Buttons({
@@ -13,7 +18,7 @@ export default function Paypal() {
             intent: "CAPTURE",
             purchase_units: [
               {
-                description: "OpenStore Cool",
+                description:filteredcheck.title,
                 amount: {
                   currency_code: "EUR",
                   value: TotalCartPrice,
@@ -24,10 +29,12 @@ export default function Paypal() {
         },
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
-          console.log(order);
+          history.push('/');
+          setCarts([]);
         },
         onError: (err) => {
           console.log(err);
+          alert('We encountered an error on the payment part')
         },
       })
       .render(paypal.current);

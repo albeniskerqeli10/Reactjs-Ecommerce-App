@@ -30,7 +30,7 @@ const FlexCart = (props ,) => {
         <button className={styling.icon} onClick={props.decrement}><AiOutlineMinus /></button>
       </div>
       <div className={styling.CartInfo}>
-        <h1>{props.price}</h1>
+        <h1>€{props.price}</h1>
       </div>
     </div>
   );

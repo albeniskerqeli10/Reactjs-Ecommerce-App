@@ -12,8 +12,9 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
+  max-width: 94%;
   min-height: 100px;
 }
 
@@ -41,6 +42,8 @@
   padding:10px 20px;
   border: none;
   background-color:var(--darkblack);
+  margin-left: 20px;
+
   color:var(--white);
 }
 
@@ -49,4 +52,22 @@
   border: none;
   background-color:var(--lightorange);
   color:var(--white);
+}
+
+.ReturnButton {
+  padding:10px 10px;
+  border: none;
+  background-color:var(--lightorange)!important;
+  color:var(--white);
+}
+
+.ActionButtons {
+  display: flex;
+  align-items: center;
+  flex-direction: row!important;
+  justify-content: center;
+}
+
+.ActionButtons h1 {
+  margin: 0 10px;
 }

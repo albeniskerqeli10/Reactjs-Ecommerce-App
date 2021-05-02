@@ -88,7 +88,9 @@ useEffect(() => {
         />
       </FlexColumn>
       <div className={styling.CartRow}>
-        <div>
+        <div className={styling.ActionButtons}>
+        <button onClick={e => history.push('/')} className={styling.ReturnButton} >Return to Products </button>
+
           <button className={styling.CleanCartBtn}
             onClick={e => {
               setCarts([]);
@@ -100,10 +102,11 @@ useEffect(() => {
 
         </div>
        
-        <div>
+        <div className={styling.ActionButtons}>
+
         <h1>Total Price :{TotalCartPrice}€</h1>
           <button className={styling.CheckoutCartBtn} onClick={e => {
-            if(TotalCartPrice) {
+           
               setCheckout([
                 ...filteredCart,
               
@@ -111,14 +114,13 @@ useEffect(() => {
                   id: filteredCart.id,
                   title: filteredCart.title,
                   image: filteredCart.image,
-                  price: filteredCart.price,
+                  price: filteredCart.price * value,
                   count: filteredCart.count,
                 }
 
               ]);
               history.push('/checkout');
 
-            }
           }} >Checkout</button>
         </div>
       </div>

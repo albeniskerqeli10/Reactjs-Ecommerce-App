@@ -11,6 +11,12 @@ const StoreProvider = props => {
   let filteredCart = carts.filter((c, i) => {
     return carts.map(cart => cart.id).indexOf(c.id) == i;
   });
+  
+
+
+  let filteredcheck = checkout.filter((check => check.id!==undefined));
+  
+
   const TotalCartPrice = [...filteredCart].reduce( (acc ,cart )=> {
     return acc+ cart.price * cart.count;
  }, 0);
@@ -41,7 +47,8 @@ const StoreProvider = props => {
         filtered:{filteredCart},
         total:{TotalCartPrice},
         values:[value,setValue],
-        checkouts:[checkout,setCheckout]
+        checkouts:[checkout,setCheckout],
+        checkoutsort:{filteredcheck}
       }}
     >
       {props.children}

@@ -5,6 +5,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  flex-wrap:wrap;
 }
 
 .Checkout h1 {
@@ -14,9 +15,10 @@
 }
 
 .CheckoutList {
-  width:100%;
+  width:450px;
   display: flex;
   align-items: center;
+  gap: 10px;
   justify-content: center;
   flex-wrap:wrap;
 flex-direction: column;
@@ -25,6 +27,38 @@ flex-direction: column;
 
 .CheckoutBox {
   width:100%;
-  min-height: 150px;
-  border:1px solid lavender;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: var(--lightblack);
+  color:white;
+  flex-wrap: wrap;
+}
+
+.CheckoutBox:hover {
+  background-color:var(--lightorange);
+  transition: all 1s ease-in-out;
+}
+
+.CheckoutBox img {
+  width:60px;
+  min-height:60px;
+  max-width:100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.CheckoutRow {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checkoutInfo {
+  margin:20px 0;
+  font-weight: normal;
 }
