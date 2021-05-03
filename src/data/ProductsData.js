@@ -1,9 +1,12 @@
+import chocolate from "../assets/chocolate.png";
+import headphones from "../assets/headphones.png";
+import macbook from "../assets/macbook.png";
+import pizza from "../assets/pizza.png";
 export const ProductsData = [
   {
     id: 0,
     title: "Chocolate",
-    image:
-      "https://niceandnatural.co.nz/themes/niceandnatural/img/packshots/nut-bars-chocolate.png",
+    image:chocolate,
     price: 5,
     count: 1,
 
@@ -12,8 +15,7 @@ export const ProductsData = [
   {
     id: 1,
     title: "Headphones",
-    image:
-      "https://lh3.googleusercontent.com/proxy/JHSi8fTkw4GHhQvQoGCc5J8hmS8fy6zS8TbHBI9K5iwhI0c5X7ESVfOKAFjP35GPs9JnrH5oLkchOySfmSKzUBqRS-WShnsxb7_0G2pQGgNDYNqMJjt8HnQ_j8jYv0i6YGs",
+    image:headphones,  
     price: 25,
     count: 1,
 

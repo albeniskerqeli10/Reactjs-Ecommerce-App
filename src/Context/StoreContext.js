@@ -5,8 +5,9 @@ export const StoreContext = createContext();
 const StoreProvider = props => {
   const [products, setProducts] = useState(ProductsData);
   const [carts, setCarts] = useState([]);
-  const [checkout , setCheckout] = useState([]);
-  let [value , setValue] = useState(0);
+  const [orders,setOrders] = useState([]);
+
+  let [value , setValue] = useState(1);
 
   let filteredCart = carts.filter((c, i) => {
     return carts.map(cart => cart.id).indexOf(c.id) == i;
@@ -14,7 +15,7 @@ const StoreProvider = props => {
   
 
 
-  let filteredcheck = checkout.filter((check => check.id!==undefined));
+  let filteredcheck = orders.filter((check => check.id!==undefined));
   
 
   const TotalCartPrice = [...filteredCart].reduce( (acc ,cart )=> {
@@ -37,7 +38,28 @@ const StoreProvider = props => {
     localStorage.setItem("CartDB", JSON.stringify(filteredCart));
   }, [carts]);
 
-  
+
+  useEffect(() => {
+
+
+    const getOrders = JSON.parse(localStorage.getItem("order"));
+    if (getOrders) {
+      setOrders(getOrders);
+    } else {
+      console.log("No products in DB");
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("order", JSON.stringify(filteredcheck));
+  }, [orders]);
+
+
+
+
+
+
+
 
   return (
     <StoreContext.Provider
@@ -47,8 +69,8 @@ const StoreProvider = props => {
         filtered:{filteredCart},
         total:{TotalCartPrice},
         values:[value,setValue],
-        checkouts:[checkout,setCheckout],
-        checkoutsort:{filteredcheck}
+        checkoutsort:{filteredcheck},
+        order:[orders,setOrders]
       }}
     >
       {props.children}

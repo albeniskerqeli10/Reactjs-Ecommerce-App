@@ -12,10 +12,10 @@ const totalqty = 1;
 import { parse } from "path";
 const Cart = () => {
   let { useContext, useState } = React;
-  const { cartctx, filtered  , total , values, checkouts} = useContext(StoreContext);
+  const { cartctx, filtered  , total , values, checkouts , order} = useContext(StoreContext);
   const [totalq , setTotalQ] = useState();
   let [value,setValue] =  values;
-let  [checkout ,setCheckout] = checkouts;
+let  [orders ,setOrders] = order;
   let [carts, setCarts] = cartctx;
   const { filteredCart } = filtered;
   let {TotalCartPrice} = total;
@@ -57,7 +57,7 @@ useEffect(() => {
 
               }}
               decrement={e => {
-                setValue(cart.count--);
+                setValue(cart.count>0?cart.count--:'');
               }}
               price={cart.price * cart.count}
             >
@@ -107,14 +107,14 @@ useEffect(() => {
         <h1>Total Price :{TotalCartPrice}€</h1>
           <button className={styling.CheckoutCartBtn} onClick={e => {
            
-              setCheckout([
+           setOrders([
                 ...filteredCart,
               
                 {
                   id: filteredCart.id,
                   title: filteredCart.title,
                   image: filteredCart.image,
-                  price: filteredCart.price * value,
+                  price: filteredCart.price,
                   count: filteredCart.count,
                 }
 

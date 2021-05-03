@@ -4,12 +4,15 @@ import styling from "../styles/Checkout.module.css";
 import {StoreContext} from "../Context/StoreContext";
 import Payment from "./Payment";
 const Checkout = () => {
-  const {checkouts ,total , checkoutsort} = useContext(StoreContext); 
-  let [checkout,setCheckout]=  checkouts;
+  const {checkouts ,total , checkoutsort ,cartctx , order} = useContext(StoreContext); 
   const history = useHistory();
   let {filteredcheck} = checkoutsort;
-  console.log(checkout);
+  const [orders,setOrders] = order;
   let {TotalCartPrice} =  total;
+
+
+
+
 
 
   return (
@@ -28,7 +31,7 @@ const Checkout = () => {
       ))}
 
     </div>
-{checkout==''?'':<div><h1>Total Price : €{TotalCartPrice}</h1> <h4 className={styling.checkoutInfo}>Pay with <strong>Paypal</strong> or <strong>Debit Card</strong></h4> <Payment/></div>}
+{orders==''?'':<div><h1>Total Price : €{TotalCartPrice}</h1> <h4 className={styling.checkoutInfo}>Pay with <strong>Paypal</strong> or <strong>Debit Card</strong></h4> <Payment/></div>}
 
     </div>
   );

@@ -17,6 +17,7 @@
 .CheckoutList {
   width:450px;
   display: flex;
+  max-width:100%;
   align-items: center;
   gap: 10px;
   justify-content: center;
@@ -54,6 +55,8 @@ flex-direction: column;
 .CheckoutRow {
   width:100%;
   display: flex;
+  flex-wrap:wrap;
+
   flex-direction: row;
   justify-content: space-around;
   align-items: center;

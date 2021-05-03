@@ -3,6 +3,7 @@ import styling from "../styles/Header.module.css";
 import { useHistory } from "react-router-dom";
 import {StoreContext} from '../Context/StoreContext';
 import {AiOutlineShopping} from "react-icons/ai";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const Header = () => {
   const {cartctx} =  useContext(StoreContext);
   const history = useHistory();
@@ -10,7 +11,7 @@ const Header = () => {
 
   return (
     <header  className={styling.Header}>
-      <div className={styling.logo}>JoyStore</div>
+      <div className={styling.logo}><Link to="/">JoyStore</Link></div>
       <div className={styling.info}>
         <button className={styling.info__button}
           onClick={e => {
