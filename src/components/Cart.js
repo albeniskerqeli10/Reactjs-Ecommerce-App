@@ -51,7 +51,7 @@ useEffect(() => {
             <FlexCart key={cart.id}
               image={cart.image}
               title={cart.title}
-              count={value}
+              count={cart.count}
               increment={e => {
                setValue(cart.count++);
 

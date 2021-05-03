@@ -34,7 +34,7 @@ export const ProductsData = [
     title: "Pizza",
     image:
       "https://www.pngkey.com/png/full/171-1714464_custom-logo-printed-wholesale-design-pizza-boxes.png",
-    price: 50,
+    price: 10,
     count: 1,
 
   }
