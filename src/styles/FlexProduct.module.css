@@ -26,6 +26,8 @@
   padding: 10px 20px;
   background-color: var(--lightgreen);
   border: none;
+  border-radius: 10px;
+
   cursor: pointer;
   color: var(--white);
   display: flex;

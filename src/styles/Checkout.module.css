@@ -30,6 +30,7 @@ flex-direction: column;
   min-height: 80px;
   display: flex;
   align-items: center;
+  border-radius: 10px;
   justify-content: center;
   flex-direction: row;
   background-color: var(--lightblack);

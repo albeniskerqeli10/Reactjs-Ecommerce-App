@@ -35,12 +35,15 @@
   padding:10px;
   font-size:15px;
   color: var(--white);
+  
   background: var(--lightblack)
 }
 
 .CleanCartBtn {
   padding:10px 20px;
   border: none;
+    border-radius: 10px;
+
   background-color:var(--darkblack);
   margin-left: 20px;
 
@@ -57,6 +60,8 @@
 .ReturnButton {
   padding:10px 10px;
   border: none;
+  border-radius: 10px;
+
   background-color:var(--lightorange)!important;
   color:var(--white);
 }
@@ -64,6 +69,8 @@
 .ActionButtons {
   display: flex;
   align-items: center;
+  border-radius: 10px;
+
   flex-direction: row!important;
   justify-content: center;
 }

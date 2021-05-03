@@ -17,6 +17,8 @@
 header button {
   padding: 10px 30px;
   border: none;
+  border-radius: 10px;
+
   background-color: var(--lightorange);
   color: var(--white);
   cursor: pointer;
