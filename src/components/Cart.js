@@ -89,7 +89,7 @@ useEffect(() => {
       </FlexColumn>
       <div className={styling.CartRow}>
         <div className={styling.ActionButtons}>
-        <button onClick={e => history.push('/')} className={styling.ReturnButton} >Return to Products </button>
+        {/* <button onClick={e => history.push('/')} className={styling.ReturnButton} >Return to Products </button> */}
 
           <button className={styling.CleanCartBtn}
             onClick={e => {

@@ -70,11 +70,44 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-
+flex-wrap: wrap;
   flex-direction: row!important;
   justify-content: center;
 }
 
 .ActionButtons h1 {
   margin: 0 10px;
+}
+
+
+
+@media (max-width:600px) {
+  .ActionButtons {
+    width:100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .CartRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 0;
+    flex-direction: column;
+  }
+
+  .CleanCartBtn {
+    margin: 40px 0;
+  }
+
+  .CheckoutCartBtn {
+    margin: 20px 0;
+  }
+
+
 }

@@ -68,3 +68,13 @@ header button {
   font-weight: normal;
   
 }
+
+@media (max-width:500px) {
+  .Header {
+    padding: 20px 0;
+  }
+  .Header .logo {
+    margin: 20px 0;
+  }
+
+}

@@ -58,3 +58,10 @@
   margin: 20px 0;
   font-size: 18px;
 }
+
+
+@media (max-width:600px) {
+  .FlexProduct {
+    margin: 20px 0;
+  }
+}

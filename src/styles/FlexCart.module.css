@@ -53,3 +53,9 @@
   font-weight: bold;
   color:var(--darkblack);
 }
+
+@media (max-width:600px) {
+  .FlexCart {
+    margin: 20px 0;
+  }
+}
