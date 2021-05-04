@@ -34,13 +34,13 @@ flex-direction: column;
   border-radius: 10px;
   justify-content: center;
   flex-direction: row;
-  background-color: var(--lightblack);
-  color:white;
+  background-color: var(--lightorange);
+  color: var(--white);
   flex-wrap: wrap;
 }
 
 .CheckoutBox:hover {
-  background-color:var(--lightorange);
+  background-color:var(--blue);
   transition: all 1s ease-in-out;
 }
 

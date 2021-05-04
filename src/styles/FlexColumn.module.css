@@ -17,7 +17,7 @@
   margin:10px 0;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color:var(--lightgreen);
+  background-color:var(--blue);
   color: var(--white);
   min-height: 60px;
 }

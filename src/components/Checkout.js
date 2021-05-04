@@ -4,7 +4,7 @@ import styling from "../styles/Checkout.module.css";
 import {StoreContext} from "../Context/StoreContext";
 import Payment from "./Payment";
 const Checkout = () => {
-  const {checkouts ,total , checkoutsort ,cartctx , order} = useContext(StoreContext); 
+  const {checkouts ,total , checkoutsort ,  order} = useContext(StoreContext); 
   const history = useHistory();
   let {filteredcheck} = checkoutsort;
   const [orders,setOrders] = order;

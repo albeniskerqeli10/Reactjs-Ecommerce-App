@@ -7,7 +7,17 @@
   --white:#fff;
   --lightblack:#1e1e1e;
   --darkblack:#121212;
-  --lightgreen:#42D3A6;
-  --lightorange:#FE523A;
+  --blue:#008CFF;
+  --lightorange:#F95656;
   --lightblue:rgb(210, 222, 226);
 }
+
+a {
+  text-decoration: none;
+}
+
+
+button {
+  cursor:pointer;
+}
+

@@ -23,10 +23,10 @@
   transition: 0.5s all ease-in-out;
 }
 .FlexProduct .addToCartButton {
-  padding: 10px 20px;
-  background-color: var(--lightgreen);
+  padding: 15px 20px;
+  background-color: var(--blue);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 
   cursor: pointer;
   color: var(--white);
@@ -37,6 +37,11 @@
   flex-direction: row;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
+}
+
+.addToCartButton:hover {
+  transition: 0.5s all ease-in-out;
+  background-color: var(--lightorange);
 }
 
 .addToCartButton h4 {

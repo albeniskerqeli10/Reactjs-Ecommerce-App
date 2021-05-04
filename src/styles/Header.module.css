@@ -9,13 +9,13 @@
   align-items: center;
   justify-content: space-around;
   min-height: 90px;
-  background-color: var(--lightgreen);
+  background-color: var(--blue);
   color: var(--white);
   flex-wrap: wrap;
 }
 
 .Header a {
-  color:white;
+  color: var(--white);
   text-align: center;
   text-decoration: none;
   font-size: 20px;
