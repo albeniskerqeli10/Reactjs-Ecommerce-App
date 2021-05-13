@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import styling from "../styles/Final.module.css";
-import { GlobalContext } from "../Context/StoreContext";
 
 const Final = () => {
-  const { cartctx } = useContext(GlobalContext);
-  const [carts, setCarts] = cartctx;
   const history = useHistory();
   return (
     carts !== "" && (
