@@ -85,7 +85,8 @@ const Store = () => {
                     title: product.title,
                     image: product.image,
                     price: product.price,
-                    count: product.count
+                    count: product.count,
+                    addCount: product.addQty
                   }
                 ]);
               }}

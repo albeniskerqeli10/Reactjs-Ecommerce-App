@@ -8,7 +8,10 @@ export const ProductsData = [
     title: "Chocolate",
     image: chocolate,
     price: 5,
-    count: 1
+    count: 1,
+    addQty: function () {
+      return ++this.count;
+    }
   },
 
   {
@@ -16,7 +19,10 @@ export const ProductsData = [
     title: "Headphones",
     image: headphones,
     price: 25,
-    count: 1
+    count: 1,
+    addQty: function () {
+      return ++this.count;
+    }
   },
 
   {
@@ -25,7 +31,10 @@ export const ProductsData = [
     image:
       "https://machousestore.com/media/catalog/product/cache/1/small_image/438.2x/040ec09b1e35df139433887a97daa66f/m/a/macbook-pro_1.png",
     price: 680,
-    count: 1
+    count: 1,
+    addQty: function () {
+      this.count = this.count++;
+    }
   },
 
   {
@@ -34,6 +43,9 @@ export const ProductsData = [
     image:
       "https://www.pngkey.com/png/full/171-1714464_custom-logo-printed-wholesale-design-pizza-boxes.png",
     price: 10,
-    count: 1
+    count: 1,
+    addQty: function () {
+      return ++this.count;
+    }
   }
 ];
