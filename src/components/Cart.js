@@ -65,13 +65,11 @@ const Cart = () => {
                 decrement={(e) => {
                   setValue(
                     cart.count > 0 ? --cart.count : "",
-                    cart.count == 0 ? HandleDelete(cart.id) : "0"
+                    cart.count == 0 ? HandleDelete(cart.id) : "0",
+                    carts.length == 1
+                      ? alert("no more products") || history.push("/")
+                      : console.log("Products")
                   );
-                  // if (cart.count == 0) {
-                  //   HandleDelete(cart.id);
-                  // } else {
-                  //   alert("not working");
-                  // }
                 }}
                 price={cart.price * cart.count}
               >

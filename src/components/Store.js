@@ -7,17 +7,11 @@ import FlexProduct from "../UI/FlexProduct.js";
 import "../styles/ToastStyling.css";
 import Modal from "styled-react-modal";
 import styled from "styled-components";
-import {
-  ToastContainer,
-  toast,
-  Bounce,
-  Slide,
-  Zoom,
-  Flip
-} from "react-toastify";
+import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const StyledModal = Modal.styled`
   width: calc(400px - 20px);
+  max-width:calc(100% - 20%);
   min-height:250px;
   flex-direction:column;
   
@@ -28,6 +22,8 @@ const StyledModal = Modal.styled`
   div {
     display:flex;
     align-items:center;
+      gap:20px;
+
     justify-content:center;
     flex-direction:column;
   }
@@ -36,6 +32,7 @@ const StyledModal = Modal.styled`
     width:200px;
     max-width:100%;
   }
+
 `;
 
 const Store = () => {
@@ -48,7 +45,11 @@ const Store = () => {
 
   return (
     <div className={styling.Store}>
-      <StyledModal isOpen={isOpen} onBackgroundClick={isOpen} onEscapeKeydown>
+      <StyledModal
+        isOpen={isOpen}
+        onBackgroundClick={() => setIsOpen(false)}
+        onEscapeKeydown
+      >
         <div key={selectedProduct.id}>
           <img src={selectedProduct.image} />
           <h1>{selectedProduct.title}</h1>
