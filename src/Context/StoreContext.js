@@ -21,7 +21,6 @@ const StoreProvider = (props) => {
 
   useEffect(() => {
     const getCarts = JSON.parse(localStorage.getItem("CartDB"));
-    console.log(getCarts);
     if (getCarts) {
       setCarts(getCarts);
     } else {
