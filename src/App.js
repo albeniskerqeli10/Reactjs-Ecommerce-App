@@ -8,19 +8,21 @@ import Final from "./components/Final";
 import { StoreContext } from "./Context/StoreContext";
 import StoreProvider from "./Context/StoreContext";
 import Checkout from "./components/Checkout";
+import { ModalProvider } from "styled-react-modal";
 export default function App() {
   return (
     <StoreProvider>
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Store} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/checkout" component={Checkout} />
-          <Route path="/final" component={Final} />
-
-        </Switch>
-      </Router>
+      <ModalProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Store} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/final" component={Final} />
+          </Switch>
+        </Router>
+      </ModalProvider>
     </StoreProvider>
   );
 }

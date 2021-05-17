@@ -5,6 +5,8 @@ import styling from "../styles/Store.module.css";
 import FlexRow from "../UI/FlexRow.js";
 import FlexProduct from "../UI/FlexProduct.js";
 import "../styles/ToastStyling.css";
+import Modal from "styled-react-modal";
+import styled from "styled-components";
 import {
   ToastContainer,
   toast,
@@ -14,17 +16,46 @@ import {
   Flip
 } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+const StyledModal = Modal.styled`
+  width: calc(400px - 20px);
+  min-height:250px;
+  flex-direction:column;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  div {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+  }
+
+  div > img {
+    width:200px;
+    max-width:100%;
+  }
+`;
+
 const Store = () => {
   const { productctx, cartctx } = useContext(StoreContext);
   const [products, setProducts] = productctx;
 
   const [carts, setCarts] = cartctx;
-  const [current, setCurrent] = React.useState([]);
-
-  const history = useHistory();
+  const [selectedProduct, setselectedProduct] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styling.Store}>
+      <StyledModal isOpen={isOpen} onBackgroundClick={isOpen} onEscapeKeydown>
+        <div key={selectedProduct.id}>
+          <img src={selectedProduct.image} />
+          <h1>{selectedProduct.title}</h1>
+          <h4>{selectedProduct.price}€</h4>
+          <button onClick={() => setIsOpen(false)}>Close</button>
+        </div>
+      </StyledModal>
       <FlexRow>
         {products.map((product) => {
           const accept = () =>
@@ -32,6 +63,11 @@ const Store = () => {
 
           return (
             <FlexProduct
+              openModal={() => {
+                setIsOpen(true);
+
+                setselectedProduct(product);
+              }}
               key={product.id}
               title={product.title}
               image={product.image}

@@ -7,7 +7,7 @@ const FlexProduct = (props) => {
     <div className={styling.FlexProduct}>
       <div className={styling.FlexImage}>
         <div className={styling.FlexLabel}>
-          <button className={styling.OpenModal}>
+          <button onClick={props.openModal} className={styling.OpenModal}>
             <AiOutlineHeart className={styling.OpenIcon} />
           </button>
         </div>
