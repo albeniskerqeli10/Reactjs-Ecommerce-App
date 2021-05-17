@@ -1,14 +1,25 @@
 import styling from "../styles/FlexProduct.module.css";
 import React from "react";
-import {FaCartPlus} from 'react-icons/fa';
-
-const FlexProduct = props => {
+import { FaCartPlus } from "react-icons/fa";
+import { AiOutlineHeart } from "react-icons/ai";
+const FlexProduct = (props) => {
   return (
     <div className={styling.FlexProduct}>
-      <img src={props.image} alt={"Product"} />
+      <div className={styling.FlexImage}>
+        <div className={styling.FlexLabel}>
+          <button className={styling.OpenModal}>
+            <AiOutlineHeart className={styling.OpenIcon} />
+          </button>
+        </div>
+        <img src={props.image} alt={"Product"} />
+      </div>
       <h1>{props.title}</h1>
-      <h4>€{props.price}</h4>
-      <button className={styling.addToCartButton} onClick={props.addToCart}><h4>Add to Cart</h4> <FaCartPlus/> </button>
+      <div className={styling.FlexProduct__row}>
+        <h4>From €{props.price}</h4>
+        <button className={styling.addToCartButton} onClick={props.addToCart}>
+          <FaCartPlus />{" "}
+        </button>
+      </div>
     </div>
   );
 };
