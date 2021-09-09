@@ -12,7 +12,6 @@ const Header = React.lazy(() => import("./components/Header"));
 
 const Final = React.lazy(() => import("./components/Final"));
 const Checkout = React.lazy(() => import("./components/Checkout"));
-const Footer = React.lazy(() => import("./components/Footer"));
 export default function App() {
   return (
     <Suspense fallback="loading">
