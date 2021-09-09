@@ -2,7 +2,7 @@ import styling from "../styles/FlexProduct.module.css";
 import React from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
-const FlexProduct = (props) => {
+const FlexProduct = React.memo((props) => {
   return (
     <div className={styling.FlexProduct}>
       <div className={styling.FlexImage}>
@@ -22,6 +22,6 @@ const FlexProduct = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default FlexProduct;
