@@ -1,16 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Suspense } from "react";
 import "./GlobalStyle.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Store from "./components/Store.js";
-import Cart from "./components/Cart.js";
-import Header from "./components/Header.js";
-import Final from "./components/Final";
+
 import { StoreContext } from "./Context/StoreContext";
 import StoreProvider from "./Context/StoreContext";
-import Checkout from "./components/Checkout";
+
 import { ModalProvider } from "styled-react-modal";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+const Store = React.lazy(() => import("./components/Store"));
+const Cart = React.lazy(() => import("./components/Cart"));
+const Header = React.lazy(() => import("./components/Header"));
+
+const Final = React.lazy(() => import("./components/Final"));
+const Checkout = React.lazy(() => import("./components/Checkout"));
+const Footer = React.lazy(() => import("./components/Footer"));
 export default function App() {
   return (
+    <Suspense fallback="loading">
     <StoreProvider>
       <ModalProvider>
         <Router>
@@ -24,5 +29,6 @@ export default function App() {
         </Router>
       </ModalProvider>
     </StoreProvider>
+</Suspense>
   );
 }
