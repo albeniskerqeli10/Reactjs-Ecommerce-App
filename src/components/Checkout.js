@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, Suspense } from "react";
 import { useHistory } from "react-router-dom";
 import styling from "../styles/Checkout.module.css";
 import { StoreContext } from "../Context/StoreContext";
@@ -15,6 +15,7 @@ const Checkout = () => {
 
   return (
     carts != "" && (
+      <Suspense fallback="Loading...">
       <div className={styling.Checkout}>
         <div className={styling.CheckoutList}>
           <h1>List of Products</h1>
@@ -44,6 +45,7 @@ const Checkout = () => {
         )}
       </div>
     )
+          </Suspense>
   );
 };
 export default Checkout;
