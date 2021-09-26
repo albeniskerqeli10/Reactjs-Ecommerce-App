@@ -34,7 +34,7 @@ const FlexCart = (props ,) => {
         <h1>€{props.price}</h1>
       </div>
     </div>
-</Suspense
+</Suspense>
   );
 };
 
