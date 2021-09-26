@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState , Suspense} from "react";
 import { useHistory } from "react-router-dom";
 import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
@@ -44,6 +44,7 @@ const Store = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <Suspense fallback="Loading...">
     <div className={styling.Store}>
       <StyledModal
         isOpen={isOpen}
@@ -109,6 +110,7 @@ const Store = () => {
         pauseOnHover
       />
     </div>
+</Suspense>
   );
 };
 
