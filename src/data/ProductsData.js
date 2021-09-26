@@ -1,7 +1,7 @@
-import chocolate from "../assets/chocolate.png";
-import headphones from "../assets/headphones.png";
-import macbook from "../assets/macbook.png";
-import pizza from "../assets/pizza.png";
+import chocolate from "../assets/chocolate.webp";
+import headphones from "../assets/headphones.webp";
+import macbook from "../assets/macbook.webp";
+import pizza from "../assets/pizza.webp";
 export const ProductsData = [
   {
     id: 0,
