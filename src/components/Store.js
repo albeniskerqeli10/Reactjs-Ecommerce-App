@@ -2,13 +2,16 @@ import React, { useContext, useState , Suspense} from "react";
 import { useHistory } from "react-router-dom";
 import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
-import FlexRow from "../UI/FlexRow.js";
-import FlexProduct from "../UI/FlexProduct.js";
+
 import "../styles/ToastStyling.css";
-import Modal from "styled-react-modal";
 import styled from "styled-components";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+const FlexProduct = React.lazy(() => import("../UI/FlexProduct.js"));
+const FlexRow = React.lazy(() => import("../UI/FlexRow.js"));
+const Modal = React.lazy(() => import("styled-react-modal"));
+
+
 const StyledModal = Modal.styled`
   width: calc(400px - 20px);
   max-width:calc(100% - 20%);
