@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext,Suspense } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
 
@@ -44,8 +44,10 @@ export default function Paypal() {
   }, []);
 
   return (
+    <Suspense fallback="Loading">
     <div>
       <div ref={paypal}></div>
     </div>
+</Suspense>
   );
 }
