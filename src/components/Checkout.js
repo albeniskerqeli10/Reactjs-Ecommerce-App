@@ -14,8 +14,9 @@ const Checkout = () => {
   let { TotalCartPrice } = total;
 
   return (
-    carts != "" && (
       <Suspense fallback="Loading...">
+
+    carts != "" && (
       <div className={styling.Checkout}>
         <div className={styling.CheckoutList}>
           <h1>List of Products</h1>
@@ -45,7 +46,8 @@ const Checkout = () => {
         )}
       </div>
     )
-          </Suspense>
+              </Suspense>
+
   );
 };
 export default Checkout;
