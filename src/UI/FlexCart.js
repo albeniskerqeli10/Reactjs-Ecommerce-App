@@ -1,5 +1,5 @@
 import styling from "../styles/FlexCart.module.css";
-import React from "react";
+import React , {Suspense} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import {AiOutlinePlus  , AiOutlineMinus} from "react-icons/ai";
 
@@ -15,6 +15,7 @@ const FlexCart = (props ,) => {
     }
 
   return (
+    <Suspense fallback="Loading">
     <div className={styling.FlexCart}>
       <div className={styling.CartInfo}>
         <img src={props.image} />
@@ -33,6 +34,7 @@ const FlexCart = (props ,) => {
         <h1>€{props.price}</h1>
       </div>
     </div>
+</Suspense
   );
 };
 
