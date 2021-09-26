@@ -28,8 +28,7 @@ export const ProductsData = [
   {
     id: 2,
     title: "Macbook M1",
-    image:
-      "https://machousestore.com/media/catalog/product/cache/1/small_image/438.2x/040ec09b1e35df139433887a97daa66f/m/a/macbook-pro_1.png",
+    image:macbook,
     price: 680,
     count: 1,
     addQty: function () {
@@ -40,8 +39,7 @@ export const ProductsData = [
   {
     id: 4,
     title: "Pizza",
-    image:
-      "https://www.pngkey.com/png/full/171-1714464_custom-logo-printed-wholesale-design-pizza-boxes.png",
+    image:pizza,
     price: 10,
     count: 1,
     addQty: function () {
