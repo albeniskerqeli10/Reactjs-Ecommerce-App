@@ -4,7 +4,6 @@ import { FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 const FlexProduct = React.memo((props) => {
   return (
-    <Suspense fallback="Loading..">
     <div className={styling.FlexProduct}>
       <div className={styling.FlexImage}>
         <div className={styling.FlexLabel}>
@@ -22,7 +21,6 @@ const FlexProduct = React.memo((props) => {
         </button>
       </div>
     </div>
-</Suspense>
   );
 });
 
