@@ -11,7 +11,6 @@ import {
   Zoom,
   Flip
 } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import styling from "../styles/Cart.module.css";
 const totalqty = 1
 const FlexCart = React.lazy(() => import("../UI/FlexCart.js"));
