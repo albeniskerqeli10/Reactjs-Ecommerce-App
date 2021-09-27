@@ -8,11 +8,11 @@ import Header from "./components/Header"
 
 import { ModalProvider } from "styled-react-modal";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-const Store = React.lazy(() => import("./components/Store"));
-const Cart = React.lazy(() => import("./components/Cart"));
+const Store = React.lazy(() => import( /* webpackChunkName:"Store" */ "./components/Store"));
+const Cart = React.lazy(() => import( /* webpackChunkName:"Cart" */   "./components/Cart"));
 
-const Final = React.lazy(() => import("./components/Final"));
-const Checkout = React.lazy(() => import("./components/Checkout"));
+const Final = React.lazy(() => import(/* webpackChunkName:"Final" */   "./components/Final"));
+const Checkout = React.lazy(() => import( /* webpackChunkName:"Checkout" */  "./components/Checkout"));
 export default function App() {
   return (
     <StoreProvider>
