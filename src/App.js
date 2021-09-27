@@ -1,5 +1,6 @@
 import React, { Fragment, Suspense } from "react";
 import "./GlobalStyle.css";
+import "react-toastify/dist/ReactToastify.css";
 
 import { StoreContext } from "./Context/StoreContext";
 import StoreProvider from "./Context/StoreContext";
