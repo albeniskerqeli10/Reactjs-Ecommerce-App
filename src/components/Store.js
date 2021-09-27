@@ -47,7 +47,6 @@ const Store = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Suspense fallback="Loading...">
     <div className={styling.Store}>
       <StyledModal
         isOpen={isOpen}
@@ -113,7 +112,6 @@ const Store = () => {
         pauseOnHover
       />
     </div>
-</Suspense>
   );
 };
 
