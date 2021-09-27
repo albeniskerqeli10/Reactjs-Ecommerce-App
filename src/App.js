@@ -19,7 +19,7 @@ export default function App() {
       <ModalProvider>
         <Router>
           <Header />
-        <Suspense fallback="loading...">
+        <Suspense fallback={<h1>Loading...</h1>}>
 
           <Switch>
             <Route path="/" exact component={Store} />
