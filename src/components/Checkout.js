@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import styling from "../styles/Checkout.module.css";
 import { StoreContext } from "../Context/StoreContext";
-import Payment from "./Payment";
+const Payment = React.lazy(() => import("./Payment"));
 const Checkout = () => {
   const { checkouts, cartctx, total, checkoutsort, order } = useContext(
     StoreContext
