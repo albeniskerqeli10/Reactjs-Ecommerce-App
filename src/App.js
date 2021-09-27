@@ -15,20 +15,22 @@ const Final = React.lazy(() => import("./components/Final"));
 const Checkout = React.lazy(() => import("./components/Checkout"));
 export default function App() {
   return (
-    <Suspense fallback="loading...">
     <StoreProvider>
       <ModalProvider>
         <Router>
           <Header />
+        <Suspense fallback="loading...">
+
           <Switch>
             <Route path="/" exact component={Store} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/final" component={Final} />
           </Switch>
+</Suspense>
+
         </Router>
       </ModalProvider>
     </StoreProvider>
-</Suspense>
   );
 }
