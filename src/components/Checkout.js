@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, Suspense } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import styling from "../styles/Checkout.module.css";
 import { StoreContext } from "../Context/StoreContext";
@@ -14,8 +14,6 @@ const Checkout = () => {
   let { TotalCartPrice } = total;
 
   return (
-      <Suspense fallback="Loading...">
-
     carts != "" && (
       <div className={styling.Checkout}>
         <div className={styling.CheckoutList}>
@@ -46,7 +44,6 @@ const Checkout = () => {
         )}
       </div>
     )
-              </Suspense>
 
   );
 };
