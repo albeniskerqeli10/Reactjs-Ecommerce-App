@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { StoreContext } from "../Context/StoreContext";
-import FlexColumn from "../UI/FlexColumn";
-import FlexCart from "../UI/FlexCart";
 import { useHistory } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
 import "../styles/ToastStyling.css";
@@ -15,7 +13,9 @@ import {
 } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styling from "../styles/Cart.module.css";
-const totalqty = 1;
+const totalqty = 1
+const FlexCart = React.lazy(() => import("../UI/FlexCart.js"));
+const FlexColumn = React.lazy(() => import("../UI/FlexColumn.js"));
 const Cart = () => {
   let { useContext, useState } = React;
   const { cartctx, filtered, total, values, checkouts, order } = useContext(
