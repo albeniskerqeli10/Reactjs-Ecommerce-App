@@ -1,11 +1,10 @@
-import React, { useContext , Suspense } from "react";
+import React, { useContext  } from "react";
 import { useHistory } from "react-router-dom";
 import styling from "../styles/Final.module.css";
 
 const Final = () => {
   const history = useHistory();
   return (
-      <Suspense fallback="loading...">
 
     carts !== "" && (
       <div className={styling.Final}>
@@ -15,7 +14,6 @@ const Final = () => {
         <button onClick={(e) => history.push("/")}>Return to Homepage</button>
       </div>
     )
-    </Suspense>
 
   );
 };
