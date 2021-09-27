@@ -15,7 +15,6 @@ const FlexCart = (props ,) => {
     }
 
   return (
-    <Suspense fallback="Loading">
     <div className={styling.FlexCart}>
       <div className={styling.CartInfo}>
         <img src={props.image} />
@@ -34,7 +33,6 @@ const FlexCart = (props ,) => {
         <h1>€{props.price}</h1>
       </div>
     </div>
-</Suspense>
   );
 };
 
