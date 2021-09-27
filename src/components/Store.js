@@ -6,7 +6,6 @@ import styling from "../styles/Store.module.css";
 import "../styles/ToastStyling.css";
 import styled from "styled-components";
 import { ToastContainer, toast, Slide } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Modal from "styled-react-modal";
 
 const FlexProduct = React.lazy(() => import("../UI/FlexProduct.js"));
