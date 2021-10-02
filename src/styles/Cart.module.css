@@ -13,8 +13,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap:20px;
   flex-direction: row;
   max-width: 94%;
+  padding:20px 0;
   min-height: 100px;
 }
 
@@ -27,6 +29,7 @@
   flex-basis: 500px;
   display: flex;
   align-items: center;
+  gap:10px;
   justify-content: center;
   flex-direction: column;
 }
@@ -39,38 +42,16 @@
   background: var(--lightblack)
 }
 
-.CleanCartBtn {
-  padding:10px 20px;
-  border: none;
-    border-radius: 10px;
 
-  background-color:var(--darkblack);
-  margin-left: 20px;
 
-  color:var(--white);
-}
 
-.CheckoutCartBtn {
-  padding:10px 20px;
-  border: none;
-  background-color:var(--lightorange);
-  color:var(--white);
-}
-
-.ReturnButton {
-  padding:10px 10px;
-  border: none;
-  border-radius: 10px;
-
-  background-color:var(--lightorange)!important;
-  color:var(--white);
-}
 
 .ActionButtons {
   display: flex;
   align-items: center;
   border-radius: 10px;
 flex-wrap: wrap;
+min-height:50px;
   flex-direction: row!important;
   justify-content: center;
 }

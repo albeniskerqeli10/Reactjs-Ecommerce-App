@@ -12,10 +12,12 @@ import {
   Flip
 } from "react-toastify";
 import styling from "../styles/Cart.module.css";
-const totalqty = 1
+import Button from "../UI/Button";
+import Toast from "../UI/Toast";
 const FlexCart = React.lazy(() => import("../UI/FlexCart.js"));
 const FlexColumn = React.lazy(() => import("../UI/FlexColumn.js"));
 const Cart = () => {
+  
   let { useContext, useState } = React;
   const { cartctx, filtered, total, values, checkouts, order } = useContext(
     StoreContext
@@ -27,9 +29,11 @@ const Cart = () => {
   const { filteredCart } = filtered;
   let { TotalCartPrice } = total;
   const history = useHistory();
+  console.log(carts.length);
+
 
   const HandleDelete = (id) => {
-    const removeItem = [...filteredCart].filter((todo) => todo.id !== id);
+    const removeItem = filteredCart.filter((todo) => todo.id !== id);
     setCarts(removeItem);
   };
 
@@ -43,6 +47,32 @@ const Cart = () => {
   useEffect(() => {
     localStorage.setItem("TotalPrice", TotalCartPrice);
   }, []);
+
+const AddToOrder = (e) => {
+  e.preventDefault();
+  setOrders([
+    ...filteredCart,
+
+    {
+      id: filteredCart.id,
+      title: filteredCart.title,
+      image: filteredCart.image,
+      price: filteredCart.price,
+      count: filteredCart.count
+    }
+  ]);
+  
+  history.push("/checkout");
+}
+
+const incrementCount = (cart) => {
+  setValue(++cart.count);
+}
+const decrementCount =  (cart) => {
+  cart.count > 0 ? setValue(--cart.count):'';
+  cart.count == 0 ? HandleDelete(cart.id) : "0";
+  carts.length === 1 ? history.push('/') : '';     
+}
 
   return (
     carts != "" && (
@@ -58,93 +88,65 @@ const Cart = () => {
                 image={cart.image}
                 title={cart.title}
                 count={cart.count}
-                increment={(e) => {
-                  setValue(++cart.count);
-                }}
-                decrement={(e) => {
-                  setValue(
-                    cart.count > 0 ? --cart.count : "",
-                    cart.count == 0 ? HandleDelete(cart.id) : "0",
-                    carts.length == 1
-                      ? alert("no more products") || history.push("/")
-                      : console.log("Products")
-                  );
-                }}
+                increment={(e) => incrementCount(cart)}
+                decrement={(e) => decrementCount(cart)}
                 price={cart.price * cart.count}
               >
-                <button
-                  className={styling.deleteIcon}
+                <Button
+                bgColor="var(--lightblack)"
+                margin="0 10px"
+                  padding="10px"
+                  textColor="white"
+
+                
                   onClick={(e) => {
+                    
                     HandleDelete(cart.id);
                     accept();
-                    carts.length == 1
-                      ? alert("No more products in the Cart") ||
-                        history.push("/")
-                      : console.log("Products");
+                    if(filteredCart.length <= 1) {
+                      history.push('/');
+                      
+                    }
+                    else {
+                      console.log('Cart updated')
+                    }
                   }}
                 >
                   <BsTrash />
-                </button>
+                </Button>
               </FlexCart>
             );
           })}
-          <ToastContainer
-            position={"top-center"}
-            progressClassName={"toastProgress"}
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            transition={Slide}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+         <Toast/>
         </FlexColumn>
         <div className={styling.CartRow}>
-          <div className={styling.ActionButtons}>
-            {carts == "" ? (
-              ""
-            ) : (
-              <button
-                className={styling.CleanCartBtn}
-                onClick={(e) => {
-                  setCarts([]);
-                  history.push("/");
-                }}
-              >
-                Clear the Cart
-              </button>
-            )}
-          </div>
-
-          {carts == "" ? (
-            ""
-          ) : (
-            <div className={styling.ActionButtons}>
+        <div className={styling.ActionButtons}>
+           
+           <Button
+             padding="10px 20px"
+             bgColor="var(--darkblack)"
+             textColor="white"
+             radius="10px"
+             onClick={(e) => {
+               setCarts([]);
+               history.push("/");
+             }}
+           >
+             Clear the Cart
+           </Button>
+       </div>
+       <div className={styling.ActionButtons}>
               <h1>Total Price :{TotalCartPrice}€</h1>
-              <button
-                className={styling.CheckoutCartBtn}
-                onClick={(e) => {
-                  setOrders([
-                    ...filteredCart,
-
-                    {
-                      id: filteredCart.id,
-                      title: filteredCart.title,
-                      image: filteredCart.image,
-                      price: filteredCart.price,
-                      count: filteredCart.count
-                    }
-                  ]);
-                  history.push("/checkout");
-                }}
+              <Button
+                padding="10px 20px"
+                bgColor="var(--lightorange)"
+                textColor="var(--white)"
+                radius="10px"
+                onClick={AddToOrder}
               >
                 Checkout
-              </button>
+              </Button>
             </div>
-          )}
         </div>
       </div>
     )

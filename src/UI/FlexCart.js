@@ -3,12 +3,13 @@ import React , {Suspense} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import {AiOutlinePlus  , AiOutlineMinus} from "react-icons/ai";
 
-const FlexCart = (props ,) => {
+import Button from './Button'
+
+const FlexCart = (props) => {
   let { useContext, useState } = React;
   const {count}  = props;
-  const { cartctx , filtered } = useContext(StoreContext);
+  const { cartctx  } = useContext(StoreContext);
   const [carts, setCarts] = cartctx;
-  const {filteredCart} = filtered;
   const HandleDelete = (id) => {
     const removeItem = [...carts].filter(todo => todo.id !== id);
     setCarts(removeItem);
@@ -25,9 +26,9 @@ const FlexCart = (props ,) => {
       </div>
 
       <div className={styling.CartInfoQt}>
-        <button onClick={props.increment} className={styling.icon}><AiOutlinePlus /></button>
+        <Button margin="5px" onClick={props.increment} bgColor="var(--lightblue)" textColor="#000000" padding="10px"><AiOutlinePlus /></Button>
         <h1>{count}</h1>
-        <button className={styling.icon} onClick={props.decrement}><AiOutlineMinus /></button>
+        <Button  margin="5px" onClick={props.decrement} bgColor="var(--lightblue)" textColor="#000000" padding="10px"><AiOutlineMinus /></Button>
       </div>
       <div className={styling.CartInfo}>
         <h1>€{props.price}</h1>

@@ -39,13 +39,6 @@
   flex-direction: row;
 }
 
-.FlexCart button {
-  padding: 10px 20px;
-  background: var(--lightblack);
-  border: none;
-  margin:0 10px;
-  color: var(--white);
-}
 
 .FlexCart .icon {
   padding:10px;

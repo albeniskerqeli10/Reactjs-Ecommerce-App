@@ -6,7 +6,6 @@ import { StoreContext } from "./Context/StoreContext";
 import StoreProvider from "./Context/StoreContext";
 import Header from "./components/Header"
 
-import { ModalProvider } from "styled-react-modal";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const Store = React.lazy(() => import( /* webpackChunkName:"Store" */ "./components/Store"));
 const Cart = React.lazy(() => import( /* webpackChunkName:"Cart" */   "./components/Cart"));
@@ -16,13 +15,12 @@ const Checkout = React.lazy(() => import( /* webpackChunkName:"Checkout" */  "./
 export default function App() {
   return (
     <StoreProvider>
-      <ModalProvider>
         <Router>
           <Header />
         <Suspense fallback={<h1>Loading...</h1>}>
 
           <Switch>
-            <Route path="/" exact component={Store} />
+            <Route  path="/" exact component={Store} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/final" component={Final} />
@@ -30,7 +28,6 @@ export default function App() {
 </Suspense>
 
         </Router>
-      </ModalProvider>
     </StoreProvider>
   );
 }

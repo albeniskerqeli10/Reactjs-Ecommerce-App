@@ -23,8 +23,6 @@ const StoreProvider = (props) => {
     const getCarts = JSON.parse(localStorage.getItem("CartDB"));
     if (getCarts) {
       setCarts(getCarts);
-    } else {
-      console.log("No products in DB");
     }
   }, []);
   useEffect(() => {

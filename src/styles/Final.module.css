@@ -7,13 +7,6 @@
     flex-direction: column;
 }
 
-.Final button {
-    padding:20px 30px;
-    border: none;
-    background-color: var(--lightorange);
-    color:white;
-    margin:20px 0;
-}
 .Final h1 {
     padding: 20px 0;
 }
