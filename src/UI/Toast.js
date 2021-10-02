@@ -1,5 +1,6 @@
 import { ToastContainer, Slide } from "react-toastify";
 import "../styles/ToastStyling.css";
+import "react-toastify/dist/ReactToastify.min.css";
 
 
 const Toast = () => {
