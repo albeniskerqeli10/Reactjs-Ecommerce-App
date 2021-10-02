@@ -5,8 +5,8 @@ import styling from "../styles/Store.module.css";
 import { toast } from "react-toastify";
 import  Toast  from "../UI/Toast";
 
-const FlexProduct = React.lazy(() => import("../UI/FlexProduct.js"));
-const FlexRow = React.lazy(() => import("../UI/FlexRow.js"));
+import  FlexProduct from  "../UI/FlexProduct.js";
+import  FlexRow from "../UI/FlexRow.js";
 
 const Store = () => {
   const { productctx, cartctx } = useContext(StoreContext);

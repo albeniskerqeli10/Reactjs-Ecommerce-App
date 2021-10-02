@@ -2,21 +2,19 @@ import React, { useEffect } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
-import {
-  toast
-} from "react-toastify";
+import {toast} from "react-toastify";
 import styling from "../styles/Cart.module.css";
 import Button from "../UI/Button";
 import Toast from "../UI/Toast";
-const FlexCart = React.lazy(() => import("../UI/FlexCart.js"));
-const FlexColumn = React.lazy(() => import("../UI/FlexColumn.js"));
+import FlexCart from "../UI/FlexCart.js";
+import FlexColumn from "../UI/FlexColumn.js";
 const Cart = () => {
   
   let { useContext, useState } = React;
-  const { cartctx, filtered, total, values, checkouts, order } = useContext(
+  const { cartctx, filtered, total, values, order } = useContext(
     StoreContext
   );
-  const [totalq, setTotalQ] = useState();
+  const [ setTotalQ] = useState();
   let [value, setValue] = values;
   let [orders, setOrders] = order;
   let [carts, setCarts] = cartctx;
