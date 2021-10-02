@@ -2,14 +2,8 @@ import React, { useEffect } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
-import "../styles/ToastStyling.css";
 import {
-  ToastContainer,
-  toast,
-  Bounce,
-  Slide,
-  Zoom,
-  Flip
+  toast
 } from "react-toastify";
 import styling from "../styles/Cart.module.css";
 import Button from "../UI/Button";

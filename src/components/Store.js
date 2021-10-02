@@ -1,10 +1,8 @@
 import React, { useContext} from "react";
-import { useHistory } from "react-router-dom";
 import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
 
-import "../styles/ToastStyling.css";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import { toast } from "react-toastify";
 import  Toast  from "../UI/Toast";
 
 const FlexProduct = React.lazy(() => import("../UI/FlexProduct.js"));
