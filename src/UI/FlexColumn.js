@@ -1,5 +1,6 @@
 import styling from "../styles/FlexColumn.module.css";
-const FlexColumn = props => {
+import {memo} from 'react';
+const FlexColumn = memo((props) => {
   return (
   <div className={styling.FlexColumn}>
       <div className={styling.FlexColumnInfo}>
@@ -20,6 +21,6 @@ const FlexColumn = props => {
   {props.children}
   
   </div>
-  )};
+  )});
 
 export default FlexColumn;

@@ -1,9 +1,9 @@
 import { ToastContainer, Slide } from "react-toastify";
 import "../styles/ToastStyling.css";
 import "react-toastify/dist/ReactToastify.min.css";
+import {memo} from 'react';
 
-
-const Toast = () => {
+const Toast = memo(() => {
     return(
         <ToastContainer
         position={"top-center"}
@@ -19,5 +19,5 @@ const Toast = () => {
         pauseOnHover
       />
     )
-}
+})
 export default Toast;

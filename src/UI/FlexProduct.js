@@ -3,7 +3,7 @@ import  {memo} from "react";
 import { FaCartPlus } from "react-icons/fa";
 import Button from './Button'
 
-const FlexProduct = memo((props) => {
+const FlexProduct = (props) => {
   return (
     <div className={styling.FlexProduct}>
       <div className={styling.FlexImage}>
@@ -20,6 +20,6 @@ const FlexProduct = memo((props) => {
       </div>
     </div>
   );
-});
+}
 
 export default FlexProduct;

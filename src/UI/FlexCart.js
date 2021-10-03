@@ -1,5 +1,5 @@
 import styling from "../styles/FlexCart.module.css";
-import  {useContext, memo} from "react";
+import  { memo} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import {AiOutlinePlus  , AiOutlineMinus} from "react-icons/ai";
 
@@ -27,6 +27,6 @@ const FlexCart = memo((props) => {
       </div>
     </div>
   );
-})
+});
 
 export default FlexCart;

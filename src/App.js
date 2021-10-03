@@ -12,8 +12,10 @@ const Final = lazy(() => import(/* webpackChunkName:"Final" */   "./components/F
 const Checkout = lazy(() => import( /* webpackChunkName:"Checkout" */  "./components/Checkout"));
 export default function App() {
   return (
-    <StoreProvider>
+    <>
         <Router>
+        <StoreProvider>
+
           <Header />
         <Suspense fallback={<h1>Loading...</h1>}>
 
@@ -24,11 +26,11 @@ export default function App() {
             <Route path="/final" component={Final} />
           </Switch>
 </Suspense>
-            <Toast/>
-
-
-        </Router>
     </StoreProvider>
+    <Toast/>
+    </Router>
+
+    </>
     
   );
 }

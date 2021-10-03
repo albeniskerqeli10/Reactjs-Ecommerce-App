@@ -1,4 +1,4 @@
-import  { useState, useEffect, createContext, useMemo } from "react";
+import  { useState, useEffect, createContext, useMemo, memo } from "react";
 import { ProductsData } from "../data/ProductsData";
 export const StoreContext = createContext();
 
@@ -53,7 +53,6 @@ const StoreProvider = (props) => {
     }),
     [
       TotalCartPrice,
-      carts,
       filteredcheck,
       filteredCart,
       orders,

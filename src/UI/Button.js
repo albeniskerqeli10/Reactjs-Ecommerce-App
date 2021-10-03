@@ -1,5 +1,5 @@
-
-const Button = ({children, bgColor, textColor , padding , onClick , radius , fontSize , margin, display, direction}) => {
+import {memo} from 'react';
+const Button = memo(({children, bgColor, textColor , padding , onClick , radius , fontSize , margin, display, direction}) => {
     const ButtonStyle = {
         backgroundColor:bgColor,
         color:textColor,
@@ -16,6 +16,6 @@ const Button = ({children, bgColor, textColor , padding , onClick , radius , fon
     return (
         <button style={ButtonStyle} onClick={onClick}>{children}</button>
     )
-}
+})
 
 export default Button;

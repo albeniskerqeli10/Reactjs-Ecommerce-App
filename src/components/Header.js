@@ -4,7 +4,8 @@ import { useHistory , Link } from "react-router-dom";
 import {StoreContext} from '../Context/StoreContext';
 import {AiOutlineShopping} from "react-icons/ai";
 import Button from "../UI/Button";
-const Header = () => {
+import {memo} from 'react';
+const Header = memo(() => {
   const {cartctx} =  useContext(StoreContext);
   const history = useHistory();
   const [carts]  = cartctx;
@@ -33,6 +34,5 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
+});
 export default Header;

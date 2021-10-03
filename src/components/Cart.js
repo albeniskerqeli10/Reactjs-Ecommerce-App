@@ -6,7 +6,7 @@ import styling from "../styles/Cart.module.css";
 import Button from "../UI/Button";
 import FlexCart from "../UI/FlexCart.js";
 import FlexColumn from "../UI/FlexColumn.js";
-import Notification from "../helpers/Notification";
+import {notification} from "../helpers/Notification";
 const Cart = () => {
     const { cartctx, filtered, total, values, order } = useContext(
     StoreContext
@@ -87,7 +87,7 @@ const decrementCount =  (cart) => {
                   onClick={(e) => {
                     
                     HandleDelete(cart.id);
-                    Notification(cart);
+                    notification(cart);
                     if(filteredCart.length <= 1) {
                       history.push('/');
                       
