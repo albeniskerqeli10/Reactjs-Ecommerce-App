@@ -26,7 +26,7 @@ const Header = memo(() => {
     <header  className={styling.Header}>
       <div className={styling.logo}><Link to="/">JoyStore</Link></div>
       <div className={styling.info}>
-        <Button display="flex" padding="15px 30px" fontSize="15px"  direction="row"
+        <Button display="flex" bgColor="var(--lightorange)" textColor="white" margin="5px" radius="10px" padding="15px 30px" fontSize="15px"  direction="row"
           onClick={PushToCart}
         >
           <h4>Shopping Cart</h4><AiOutlineShopping/>

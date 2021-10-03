@@ -21,7 +21,7 @@
   font-size: 20px;
 }
 
-header button {
+/* header button {
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
@@ -29,7 +29,7 @@ header button {
   background-color: var(--lightorange);
   color: var(--white);
   cursor: pointer;
-}
+} */
 
 .Header div {
   width: 380px;
@@ -46,6 +46,7 @@ header button {
   flex-direction: row;
   flex-wrap:wrap;
 }
+
 
 .Header .info {
   display:flex;
