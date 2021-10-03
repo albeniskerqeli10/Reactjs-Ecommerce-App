@@ -1,10 +1,9 @@
-import React, { useContext} from "react";
+import {lazy, useContext} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
-import  Toast  from "../UI/Toast";
 import  FlexProduct from  "../UI/FlexProduct.js";
 import  FlexRow from "../UI/FlexRow.js";
-import Notification from "../helpers/Notification";
+import Notification  from "../helpers/Notification";
 
 const Store = () => {
   const { productctx, cartctx } = useContext(StoreContext);
@@ -49,7 +48,6 @@ const  addToCart = (product) => {
         })}
       </FlexRow>
 
-      <Toast/>
     </div>
   );
 };

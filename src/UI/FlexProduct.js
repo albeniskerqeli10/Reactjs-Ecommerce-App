@@ -1,9 +1,9 @@
 import styling from "../styles/FlexProduct.module.css";
-import React , {Suspense} from "react";
+import  {memo} from "react";
 import { FaCartPlus } from "react-icons/fa";
 import Button from './Button'
 
-const FlexProduct = React.memo((props) => {
+const FlexProduct = memo((props) => {
   return (
     <div className={styling.FlexProduct}>
       <div className={styling.FlexImage}>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, Suspense } from "react";
+import  { useState, useEffect, createContext, useMemo } from "react";
 import { ProductsData } from "../data/ProductsData";
 export const StoreContext = createContext();
 
@@ -41,7 +41,7 @@ const StoreProvider = (props) => {
   useEffect(() => {
     localStorage.setItem("order", JSON.stringify(filteredcheck));
   }, [orders]);
-  const memoValue = React.useMemo(
+  const memoValue = useMemo(
     () => ({
       productctx: [products, setProducts],
       cartctx: [carts, setCarts],

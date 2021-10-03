@@ -1,9 +1,8 @@
-import React,  {useContext} from "react";
+import {useContext} from "react";
 import styling from "../styles/Header.module.css";
-import { useHistory } from "react-router-dom";
+import { useHistory , Link } from "react-router-dom";
 import {StoreContext} from '../Context/StoreContext';
 import {AiOutlineShopping} from "react-icons/ai";
-import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 const Header = () => {
   const {cartctx} =  useContext(StoreContext);

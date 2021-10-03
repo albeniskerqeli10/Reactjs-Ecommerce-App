@@ -1,20 +1,12 @@
 import styling from "../styles/FlexCart.module.css";
-import React , {Suspense} from "react";
+import  {useContext, memo} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import {AiOutlinePlus  , AiOutlineMinus} from "react-icons/ai";
 
 import Button from './Button'
 
-const FlexCart = (props) => {
-  let { useContext, useState } = React;
+const FlexCart = memo((props) => {
   const {count}  = props;
-  const { cartctx  } = useContext(StoreContext);
-  const [carts, setCarts] = cartctx;
-  const HandleDelete = (id) => {
-    const removeItem = [...carts].filter(todo => todo.id !== id);
-    setCarts(removeItem);
-    }
-
   return (
     <div className={styling.FlexCart}>
       <div className={styling.CartInfo}>
@@ -35,6 +27,6 @@ const FlexCart = (props) => {
       </div>
     </div>
   );
-};
+})
 
 export default FlexCart;

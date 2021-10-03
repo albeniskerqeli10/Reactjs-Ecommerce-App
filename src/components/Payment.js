@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import { useRef, useEffect, useContext } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
 

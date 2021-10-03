@@ -1,4 +1,4 @@
-import React, { useContext  } from "react";
+import  { useContext  } from "react";
 import { useHistory } from "react-router-dom";
 import styling from "../styles/Final.module.css";
 import { StoreContext } from "../Context/StoreContext";

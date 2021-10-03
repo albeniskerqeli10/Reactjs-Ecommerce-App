@@ -1,10 +1,9 @@
-import  { useEffect , useContext,useState } from "react";
+import  { useEffect ,lazy, useContext,useState } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
 import styling from "../styles/Cart.module.css";
 import Button from "../UI/Button";
-import Toast from "../UI/Toast";
 import FlexCart from "../UI/FlexCart.js";
 import FlexColumn from "../UI/FlexColumn.js";
 import Notification from "../helpers/Notification";
@@ -103,7 +102,6 @@ const decrementCount =  (cart) => {
               </FlexCart>
             );
           })}
-         <Toast/>
         </FlexColumn>
         <div className={styling.CartRow}>
         <div className={styling.ActionButtons}>

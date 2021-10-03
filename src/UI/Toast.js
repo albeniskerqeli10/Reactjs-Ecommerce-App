@@ -8,7 +8,7 @@ const Toast = () => {
         <ToastContainer
         position={"top-center"}
         progressClassName={"toastProgress"}
-        autoClose={5000}
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
         transition={Slide}

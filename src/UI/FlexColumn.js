@@ -1,5 +1,4 @@
 import styling from "../styles/FlexColumn.module.css";
-import React from "react";
 const FlexColumn = props => {
   return (
   <div className={styling.FlexColumn}>
