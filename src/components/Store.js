@@ -1,20 +1,16 @@
 import React, { useContext} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
-
-import { toast } from "react-toastify";
 import  Toast  from "../UI/Toast";
-
 import  FlexProduct from  "../UI/FlexProduct.js";
 import  FlexRow from "../UI/FlexRow.js";
+import Notification from "../helpers/Notification";
 
 const Store = () => {
   const { productctx, cartctx } = useContext(StoreContext);
   const [products] = productctx;
 
   const [carts, setCarts] = cartctx;
-  const accept = (product) =>
-  toast.success(`${product.title} Product added`);
 
 const  addToCart = (product) => {
   setCarts([
@@ -29,7 +25,7 @@ const  addToCart = (product) => {
       addCount: product.addQty
     }
   ]);
-  accept(product);
+  Notification(product);
 
 }
 
