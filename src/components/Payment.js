@@ -1,6 +1,8 @@
 import { useRef, useEffect, useContext } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
+import { loadScript } from "@paypal/paypal-js";
+
 
 export default function Paypal() {
   const paypal = useRef();
@@ -9,12 +11,16 @@ export default function Paypal() {
   const { total, cartctx, order, checkoutsort } = useContext(StoreContext);
   const { TotalCartPrice } = total;
   let { filteredcheck } = checkoutsort;
-  let [carts, setCarts] = cartctx;
-  let [orders, setOrders] = order;
-
+  let [setCarts] = cartctx;
+  let [setOrders] = order;
   useEffect(() => {
-    window.paypal
-      .Buttons({
+     /* eslint-enable */ 
+
+     const InitializePaypal   = async() => {
+
+      const paymentInit = await loadScript({ "client-id": "AcVPwH6c4zhgvpb2Oel9HE5dPeSsq4i2Po_PhZ_CZEk49Z5cuJmasT-8n7g8v6kgHXPNpnvUQqivZQ0D" , currency: "EUR" });
+
+    paymentInit.Buttons({
         createOrder: (data, actions, err) => {
           return actions.order.create({
             intent: "CAPTURE",
@@ -41,6 +47,8 @@ export default function Paypal() {
         }
       })
       .render(paypal.current);
+    }
+    InitializePaypal();
   }, []);
 
   return (
