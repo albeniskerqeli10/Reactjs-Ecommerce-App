@@ -1,5 +1,5 @@
 import {memo} from 'react';
-const Button = memo(({children, bgColor, textColor , padding , onClick , radius , fontSize , margin, display, direction}) => {
+const Button = memo(({children, bgColor, textColor , padding , onClick , radius , fontSize , margin, display, direction, ariaLabel }) => {
     const ButtonStyle = {
         backgroundColor:bgColor,
         color:textColor,
@@ -14,7 +14,7 @@ const Button = memo(({children, bgColor, textColor , padding , onClick , radius 
 
     }
     return (
-        <button style={ButtonStyle} onClick={onClick}>{children}</button>
+        <button style={ButtonStyle} aria-label={ariaLabel} onClick={onClick}>{children}</button>
     )
 })
 

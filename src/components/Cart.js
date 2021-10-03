@@ -77,7 +77,7 @@ const decrementCount =  (cart) => {
                 decrement={(e) => decrementCount(cart)}
                 price={cart.price * cart.count}
               >
-                <Button aria-label="delete"
+                <Button ariaLabel="delete"
                 bgColor="var(--lightblack)"
                 margin="0 10px"
                   padding="10px"

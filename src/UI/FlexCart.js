@@ -18,9 +18,9 @@ const FlexCart = memo((props) => {
       </div>
 
       <div className={styling.CartInfoQt}>
-        <Button margin="5px" onClick={props.increment} bgColor="var(--lightblue)" textColor="#000000" padding="10px" aria-label="increase"><AiOutlinePlus /></Button>
+        <Button margin="5px" onClick={props.increment} bgColor="var(--lightblue)" textColor="#000000" padding="10px" ariaLabel="increase"><AiOutlinePlus /></Button>
         <h1>{count}</h1>
-        <Button  margin="5px" onClick={props.decrement} bgColor="var(--lightblue)" textColor="#000000" padding="10px" aria-label="decrease"><AiOutlineMinus /></Button>
+        <Button  margin="5px" onClick={props.decrement} bgColor="var(--lightblue)" textColor="#000000" padding="10px" ariaLabel="decrease"><AiOutlineMinus /></Button>
       </div>
       <div className={styling.CartInfo}>
         <h1>€{props.price}</h1>

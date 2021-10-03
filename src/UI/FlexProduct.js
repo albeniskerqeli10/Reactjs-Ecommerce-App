@@ -14,7 +14,7 @@ const FlexProduct = (props) => {
       <h1>{props.title}</h1>
       <div className={styling.FlexProduct__row}>
         <h4>From €{props.price}</h4>
-        <Button bgColor="var(--blue)" aria-label="Product"  textColor="#fff" padding="10px 20px " radius="5px" fontSize="20px" onClick={props.addToCart}>
+        <Button bgColor="var(--blue)" ariaLabel="Product"  textColor="#fff" padding="10px 20px " radius="5px" fontSize="20px" onClick={props.addToCart}>
           <FaCartPlus />{" "}
         </Button>
       </div>
