@@ -24,7 +24,7 @@ const Checkout = () => {
               className={styling.CheckoutBox}
             >
               <div className={styling.CheckoutRow}>
-                <img src={check.image} />
+                <img src={check.image} alt="checkout product" />
                 <h4>{check.title}</h4>
                 <h4>€{check.count * check.price}</h4>
               </div>
