@@ -9,11 +9,11 @@ const FlexProduct = (props) => {
       <div className={styling.FlexImage}>
         <div className={styling.FlexLabel}>
         </div>
-        <img src={props.image} alt="Product" />
+        <img src={props.image} loading="lazy" alt="Product" />
       </div>
       <h1>{props.title}</h1>
       <div className={styling.FlexProduct__row}>
-        <h4>From €{props.price}</h4>
+        <h2>From €{props.price}</h2>
         <Button bgColor="var(--blue)" ariaLabel="Product"  textColor="#fff" padding="10px 20px " radius="5px" fontSize="20px" onClick={props.addToCart}>
           <FaCartPlus />{" "}
         </Button>

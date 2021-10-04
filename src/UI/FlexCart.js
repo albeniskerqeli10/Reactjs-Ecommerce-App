@@ -10,7 +10,7 @@ const FlexCart = memo((props) => {
   return (
     <div className={styling.FlexCart}>
       <div className={styling.CartInfo}>
-        <img src={props.image} alt="product" />
+        <img src={props.image} loading="lazy" alt="product" />
       </div>
       <div className={styling.CartInfo}>
       <h1>{props.title}</h1>
