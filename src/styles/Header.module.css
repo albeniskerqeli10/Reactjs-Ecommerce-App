@@ -21,18 +21,10 @@
   font-size: 20px;
 }
 
-/* header button {
-  padding: 10px 30px;
-  border: none;
-  border-radius: 10px;
 
-  background-color: var(--lightorange);
-  color: var(--white);
-  cursor: pointer;
-} */
 
 .Header div {
-  width: 380px;
+  width: calc(380px -20px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +59,8 @@
 @media (max-width:500px) {
   .Header {
     padding: 20px 0;
+  }
+  .Header > div {
   }
   .Header .logo {
     margin: 20px 0;

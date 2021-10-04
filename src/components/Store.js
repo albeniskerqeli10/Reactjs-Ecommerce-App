@@ -3,7 +3,7 @@ import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
 import  FlexProduct from  "../UI/FlexProduct.js";
 import  FlexRow from "../UI/FlexRow.js";
-import {notification}  from "../helpers/Notification";
+import {toastNotification}  from "./ToastNotification";
 
 const Store = memo(() => {
   const { productctx, cartctx } = useContext(StoreContext);
@@ -24,7 +24,7 @@ const  addToCart = (product) => {
       addCount: product.addQty
     }
   ]);
-  notification(product);
+  toastNotification(product ,'Product added to the cart');
 
 }
 

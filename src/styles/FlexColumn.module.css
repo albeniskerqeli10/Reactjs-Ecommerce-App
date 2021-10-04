@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   background-color:var(--blue);
   color: var(--white);
-  min-height: 60px;
+  min-height: 50px;
 }
 .FlexColumn h1 {
   font-size: 20px;

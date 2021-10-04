@@ -1,5 +1,5 @@
 import  { useState, useEffect, createContext, useMemo, memo } from "react";
-import { ProductsData } from "../data/ProductsData";
+import ProductsData from "../data/ProductsData";
 export const StoreContext = createContext();
 
 const StoreProvider = (props) => {

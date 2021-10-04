@@ -4,7 +4,7 @@ import StoreProvider from "./Context/StoreContext";
 import Header from "./components/Header"
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Toast from "./UI/Toast";
+import ToastProvider from './helpers/ToastProvider.js'
 const Store = lazy(() => import( /* webpackChunkName:"Store" */ "./components/Store"));
 const Cart = lazy(() => import( /* webpackChunkName:"Cart" */   "./components/Cart"));
 
@@ -12,7 +12,6 @@ const Final = lazy(() => import(/* webpackChunkName:"Final" */   "./components/F
 const Checkout = lazy(() => import( /* webpackChunkName:"Checkout" */  "./components/Checkout"));
 export default function App() {
   return (
-    <>
         <Router>
         <StoreProvider>
 
@@ -27,10 +26,9 @@ export default function App() {
           </Switch>
 </Suspense>
     </StoreProvider>
-    <Toast/>
+    <ToastProvider/>
     </Router>
 
-    </>
     
   );
 }

@@ -8,9 +8,14 @@
   flex-wrap: wrap;
 }
 
+.FlexProduct button:hover {
+  background-color: var(--lightorange)!important;
+}
+
 .FlexProduct__row {
-  width: 100%;
+  width: calc(100% - 10px);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }

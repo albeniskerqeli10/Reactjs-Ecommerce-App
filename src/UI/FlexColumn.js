@@ -5,17 +5,17 @@ const FlexColumn = memo((props) => {
   <div className={styling.FlexColumn}>
       <div className={styling.FlexColumnInfo}>
 <div className={styling.FlexInfo}>
-<h1>Product Image</h1>
+<h1>Image</h1>
       </div>
       <div className={styling.FlexInfo}>
-<h1>Product Name</h1>
+<h1>Name</h1>
       </div>
       <div className={styling.FlexInfo}>
-<h1>Product Qty</h1>
+<h1>Quantity</h1>
       </div>
 
       <div className={styling.FlexInfo}>
-<h1>Product Price</h1>
+<h1>Price</h1>
       </div>
       </div>
   {props.children}

@@ -6,12 +6,13 @@ import styling from "../styles/Cart.module.css";
 import Button from "../UI/Button";
 import FlexCart from "../UI/FlexCart.js";
 import FlexColumn from "../UI/FlexColumn.js";
-import {notification} from "../helpers/Notification";
+import {toastNotification} from "./ToastNotification";
+
 const Cart = () => {
     const { cartctx, filtered, total, values, order } = useContext(
     StoreContext
   );
-  const [totalQ,setTotalQ] = useState();
+  const [totalQ,setTotalQ] = useState(0);
   let [value, setValue] = values;
   let [orders, setOrders] = order;
   let [carts, setCarts] = cartctx;
@@ -55,10 +56,20 @@ const AddToOrder = (e) => {
 const incrementCount = (cart) => {
   setValue(++cart.count);
 }
+
+
+if(filteredCart.length === 0) {
+  alert('No more products in the cart');
+  history.push('/');
+}
+else {
+}
+
+
 const decrementCount =  (cart) => {
   cart.count > 0 ? setValue(--cart.count):'';
   cart.count == 0 ? HandleDelete(cart.id) : "0";
-  carts.length === 1 ? history.push('/') : '';     
+
 }
 
   return (
@@ -87,7 +98,7 @@ const decrementCount =  (cart) => {
                   onClick={(e) => {
                     
                     HandleDelete(cart.id);
-                    notification(cart);
+                    toastNotification(cart, 'Product removed from the cart');
                     if(filteredCart.length <= 1) {
                       history.push('/');
                       

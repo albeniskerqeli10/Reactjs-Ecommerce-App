@@ -11,6 +11,7 @@ const Button = memo(({children, bgColor, textColor , padding , onClick , radius 
         flexDirection:direction,
         alignItems:"center",
         justifyContent:"center",
+        
 
     }
     return (
