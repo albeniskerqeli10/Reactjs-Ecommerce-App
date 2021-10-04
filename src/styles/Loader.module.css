@@ -1,0 +1,20 @@
+
+/*Styling for Loader Component 😊*/
+.loader__container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;/*New Flexbox feature to add spaces between flex items, Supported in modern browsers 🚧 */
+}
+
+.loader__title {
+    font-size: 20px;
+    text-align: center;
+
+    font-weight: bold;
+    color: var(--black);
+}

@@ -6,6 +6,7 @@ const StoreProvider = (props) => {
   const [products, setProducts] = useState(ProductsData);
   const [carts, setCarts] = useState([]);
   const [orders, setOrders] = useState([]);
+  
 
   let [value, setValue] = useState(1);
 

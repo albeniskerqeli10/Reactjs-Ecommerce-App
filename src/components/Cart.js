@@ -1,4 +1,4 @@
-import  { useEffect ,lazy, useContext,useState } from "react";
+import  { useEffect , useContext,useState } from "react";
 import { StoreContext } from "../Context/StoreContext";
 import { useHistory } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
@@ -58,6 +58,8 @@ const incrementCount = (cart) => {
 }
 
 
+
+
 if(filteredCart.length === 0) {
   alert('No more products in the cart');
   history.push('/');
@@ -99,13 +101,7 @@ const decrementCount =  (cart) => {
                     
                     HandleDelete(cart.id);
                     toastNotification(cart, 'Product removed from the cart');
-                    if(filteredCart.length <= 1) {
-                      history.push('/');
-                      
-                    }
-                    else {
-                      console.log('Cart updated')
-                    }
+                  
                   }}
                 >
                   <BsTrash />
