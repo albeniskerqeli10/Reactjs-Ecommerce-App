@@ -6,6 +6,7 @@
     "@babel/runtime": "^7.14.0",
     "@paypal/paypal-js": "^4.0.12",
     "@types/react": "17.0.4",
+    "@vitejs/plugin-react": "^4.0.4",
     "babel-runtime": "^6.26.0",
     "firebase-tools": "^9.10.0",
     "global": "^4.4.0",
@@ -18,19 +19,21 @@
     "react-toastify": "^7.0.4",
     "serve": "^12.0.1",
     "server": "^1.0.36",
-    "source-map-explorer": "^2.5.2"
+    "source-map-explorer": "^2.5.2",
+    "vite": "^4.4.9",
+    "vite-plugin-svgr": "^3.2.0"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js' --only-mapped",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "test": "vite test --env=jsdom",
+    "eject": "vite eject",
+    "serve": "vite preview"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.26.1",
-    "react-scripts": "^4.0.3"
+    "eslint-plugin-react": "^7.26.1"
   },
   "browserslist": {
     "production": [

@@ -1,8 +1,8 @@
 import {useContext , memo} from "react";
 import { StoreContext } from "../Context/StoreContext";
 import styling from "../styles/Store.module.css";
-import  FlexProduct from  "../UI/FlexProduct.js";
-import  FlexRow from "../UI/FlexRow.js";
+import  FlexProduct from  "../UI/FlexProduct.jsx";
+import  FlexRow from "../UI/FlexRow.jsx";
 import {toastNotification}  from "./ToastNotification";
 
 const Store = memo(() => {

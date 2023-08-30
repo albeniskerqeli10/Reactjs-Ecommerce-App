@@ -4,8 +4,8 @@ import { useHistory } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
 import styling from "../styles/Cart.module.css";
 import Button from "../UI/Button";
-import FlexCart from "../UI/FlexCart.js";
-import FlexColumn from "../UI/FlexColumn.js";
+import FlexCart from "../UI/FlexCart.jsx";
+import FlexColumn from "../UI/FlexColumn.jsx";
 import {toastNotification} from "./ToastNotification";
 
 const Cart = () => {

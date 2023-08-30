@@ -5,7 +5,7 @@ import Header from "./components/Header"
 import Loader from "./components/Loader";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ToastProvider from './helpers/ToastProvider.js'
+import ToastProvider from './helpers/ToastProvider.jsx'
 const Store = lazy(() => import( /* webpackChunkName:"Store" */ "./components/Store"));
 const Cart = lazy(() => import( /* webpackChunkName:"Cart" */   "./components/Cart"));
 
